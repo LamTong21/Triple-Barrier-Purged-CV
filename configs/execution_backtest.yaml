@@ -1,0 +1,14 @@
+# ==============================================================================
+# Portfolio Backtesting, Trade Resolution, and Financial Friction Parameters
+# ==============================================================================
+execution:
+  fee_rate: 0.0015             # 0.15% one-way brokerage fees + taxes
+  slippage: 0.0005             # 0.05% one-way estimated execution slippage
+  total_friction_per_trade: 0.0020 # 0.20% per side (0.40% round-trip)
+  risk_free_rate: 0.045        # 4.5% annual risk-free rate
+  annual_trading_days: 252     # Standard annualization factor
+
+portfolio:
+  lockout_concurrent_trades: true # Enforce causal execution lockout
+  output_fig_path: "portfolio_performance.png"
+  log_execution_path: "data/processed/df_backtest_execution.csv"

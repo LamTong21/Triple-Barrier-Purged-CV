@@ -1,0 +1,16 @@
+# ==============================================================================
+# Base Environment and Experiment Reproducibility Parameters
+# ==============================================================================
+experiment:
+  name: "financial_return_dynamics_modeling07_2"
+  seed: 42
+  device: "cpu"
+
+data:
+  portfolio_path: "data/final_portfolio.csv"
+  cache_dir: "data/cache"
+  output_dir: "data/processed"
+  artifacts_dir: "checkpoints"
+  start_date: "2018-01-01"
+  end_date: "2026-06-01"
+  benchmark_ticker: "VNINDEX"

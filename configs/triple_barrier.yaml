@@ -1,0 +1,13 @@
+# ==============================================================================
+# Causal Triple Barrier Meta-Labeling Configuration
+# ==============================================================================
+labeling:
+  target_horizon: 5           # Horizontal barrier: holding period (bars)
+  profit_taking_multiplier: 1.0 # Upper barrier: pt * sigma_t
+  stop_loss_multiplier: 1.0     # Lower barrier: sl * sigma_t
+  volatility_span: 20          # Causal EWMA window for sigma_t estimation
+  volatility_floor: 0.005      # Minimum vol floor to avoid degenerate narrow bands
+
+meta_label_mapping:
+  take_profit_hit: 1           # Positive class: hits upper barrier first
+  failure_or_timeout: 0        # Negative class: hits lower barrier or times out
